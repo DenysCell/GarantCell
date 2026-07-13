@@ -1,28 +1,25 @@
-GARANTCELL — SITE DE VENDAS
+GARANTCELL V4 PREMIUM
 
-ARQUIVOS:
-- index.html
-- styles.css
-- script.js
-- assets/garantcell-sistema.png
-
-COMO ABRIR:
+COMO TESTAR
 1. Extraia o arquivo ZIP.
-2. Dê dois cliques em index.html.
+2. Abra a pasta GarantCell_V4_Premium.
+3. Dê dois cliques em index.html.
 
-COMO COLOCAR O LINK DO ASAAS:
-1. Abra o arquivo script.js no Bloco de Notas.
-2. Encontre esta linha:
+COMO ATUALIZAR NO GITHUB
+1. Apague os arquivos antigos do repositório.
+2. Envie index.html, styles.css, script.js e a pasta assets.
+3. Clique em Commit changes.
+4. O GitHub Pages atualiza sozinho.
+
+COMO COLOCAR O LINK DO ASAAS
+1. Abra script.js no Bloco de Notas.
+2. Encontre:
    const LINK_DE_PAGAMENTO = "";
-3. Cole seu link entre as aspas. Exemplo:
-   const LINK_DE_PAGAMENTO = "https://www.asaas.com/c/seu-link";
-4. Salve o arquivo.
+3. Cole seu link entre as aspas.
+4. Salve.
 
-WHATSAPP CONFIGURADO:
-(55) 99112-6008
-
-VALOR CONFIGURADO:
+VALOR
 R$ 29,90
 
-OBSERVAÇÃO:
-Enquanto o link do Asaas não estiver configurado, o botão principal abre o WhatsApp.
+WHATSAPP
+(55) 99112-6008

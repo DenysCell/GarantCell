@@ -1,193 +1,288 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="GarantCell — controle de garantias para assistências técnicas. Licença vitalícia por apenas R$ 29,90." />
-  <title>GarantCell | Controle de Garantias</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GarantCell — controle profissional de garantias para empresas e prestadores de serviços.">
+  <title>GarantCell | Controle Profissional de Garantias</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="page-glow glow-a"></div>
+  <div class="page-glow glow-b"></div>
+
   <header class="topbar">
-    <a class="brand" href="#inicio" aria-label="GarantCell - início">
-      <span class="brand-shield">✦</span>
-      <span>Garant<span>Cell</span></span>
+    <a href="#inicio" class="brand">
+      <span class="brand-icon">G</span>
+      <span class="brand-name">Garant<span>Cell</span></span>
     </a>
+
     <nav>
-      <a href="#recursos">Recursos</a>
+      <a href="#solucao">Solução</a>
+      <a href="#publico">Para quem é</a>
       <a href="#demonstracao">Demonstração</a>
       <a href="#preco">Preço</a>
-      <a href="#duvidas">Dúvidas</a>
     </nav>
-    <a class="btn btn-small" href="#preco">Comprar agora</a>
+
+    <a class="btn btn-header" href="#preco">Comprar agora</a>
   </header>
 
   <main>
     <section class="hero" id="inicio">
-      <div class="glow glow-one"></div>
-      <div class="hero-copy">
-        <div class="eyebrow">DESENVOLVIDO PARA ASSISTÊNCIAS TÉCNICAS</div>
-        <h1>Controle suas garantias com <span>rapidez e organização</span></h1>
-        <p>Chega de papel, caderno e planilha. O GarantCell reúne clientes, serviços, valores e vencimentos em um sistema simples e profissional.</p>
+      <div class="hero-grid"></div>
 
-        <div class="hero-price">
-          <span>Pagamento único</span>
-          <strong>R$ 29,90</strong>
-          <small>Licença vitalícia • Sem mensalidade</small>
-        </div>
+      <div class="hero-copy reveal">
+        <span class="eyebrow">CONTROLE PROFISSIONAL DE GARANTIAS</span>
+        <h1>Mais organização para sua empresa. <span>Mais confiança para seus clientes.</span></h1>
+        <p class="hero-slogan">Porque uma garantia bem organizada também vende confiança.</p>
+        <p class="hero-text">
+          Organize clientes, serviços, prazos e vencimentos em um sistema moderno,
+          rápido e fácil de usar.
+        </p>
 
         <div class="hero-actions">
-          <a class="btn btn-primary payment-link" href="#preco">Comprar agora</a>
-          <a class="btn btn-ghost" href="#demonstracao">Ver o sistema</a>
+          <a class="btn btn-primary buy-link" href="#preco">Comprar agora • R$ 29,90</a>
+          <a class="btn btn-secondary" href="#demonstracao">Ver demonstração</a>
         </div>
 
-        <div class="trust-row">
-          <span>✓ Fácil de usar</span>
-          <span>✓ Windows 10 e 11</span>
+        <div class="hero-trust">
+          <span>✓ Pagamento único</span>
+          <span>✓ Sem mensalidade</span>
           <span>✓ Suporte via WhatsApp</span>
         </div>
       </div>
 
-      <div class="hero-visual">
-        <div class="screen-frame">
-          <img src="assets/garantcell-sistema.png" alt="Tela principal do sistema GarantCell" />
+      <div class="hero-visual reveal">
+        <div class="floating-card card-one">
+          <small>Status</small>
+          <strong>Garantias organizadas</strong>
+        </div>
+        <div class="floating-card card-two">
+          <small>Resultado</small>
+          <strong>Mais profissionalismo</strong>
+        </div>
+
+        <div class="monitor">
+          <div class="monitor-top">
+            <span></span><span></span><span></span>
+          </div>
+          <img src="assets/garantcell-sistema.png" alt="Sistema GarantCell">
         </div>
       </div>
     </section>
 
-    <section class="benefits-strip">
-      <div><strong>Licença vitalícia</strong><span>Compre uma vez e use sem mensalidade.</span></div>
-      <div><strong>Instalação rápida</strong><span>Comece a usar em poucos minutos.</span></div>
-      <div><strong>Controle completo</strong><span>Acompanhe ativas, próximas e expiradas.</span></div>
-      <div><strong>Suporte direto</strong><span>Atendimento pelo WhatsApp.</span></div>
-    </section>
-
-    <section class="section" id="recursos">
-      <div class="section-heading">
-        <span>RECURSOS</span>
-        <h2>Tudo o que sua assistência precisa</h2>
-        <p>Uma solução prática para organizar garantias e atender seus clientes com mais profissionalismo.</p>
+    <section class="impact-strip reveal">
+      <div>
+        <strong>1 sistema</strong>
+        <span>para centralizar suas garantias</span>
       </div>
-
-      <div class="cards">
-        <article class="card">
-          <div class="icon">＋</div>
-          <h3>Cadastro rápido</h3>
-          <p>Registre cliente, telefone, aparelho, serviço, valor e prazo de garantia.</p>
-        </article>
-        <article class="card">
-          <div class="icon">⌕</div>
-          <h3>Consulta instantânea</h3>
-          <p>Encontre uma garantia rapidamente pelo nome, telefone ou modelo.</p>
-        </article>
-        <article class="card">
-          <div class="icon">◷</div>
-          <h3>Avisos de vencimento</h3>
-          <p>Veja o que está ativo, próximo do vencimento e expirado.</p>
-        </article>
-        <article class="card">
-          <div class="icon">▦</div>
-          <h3>Painel completo</h3>
-          <p>Tenha uma visão geral das garantias cadastradas em uma única tela.</p>
-        </article>
-        <article class="card">
-          <div class="icon">✎</div>
-          <h3>Edição simples</h3>
-          <p>Atualize ou exclua registros com poucos cliques.</p>
-        </article>
-        <article class="card">
-          <div class="icon">⚙</div>
-          <h3>Feito para Windows</h3>
-          <p>Interface moderna e fácil de usar no computador da sua assistência.</p>
-        </article>
+      <div>
+        <strong>0 mensalidades</strong>
+        <span>pagamento único e licença vitalícia</span>
+      </div>
+      <div>
+        <strong>Mais agilidade</strong>
+        <span>encontre informações em segundos</span>
+      </div>
+      <div>
+        <strong>Mais confiança</strong>
+        <span>atenda seus clientes com organização</span>
       </div>
     </section>
 
-    <section class="section demo" id="demonstracao">
-      <div class="section-heading">
+    <section class="section problem-solution" id="solucao">
+      <div class="section-title reveal">
+        <span>MENOS DESORGANIZAÇÃO</span>
+        <h2>Chega de depender de papel, caderno e conversa perdida no WhatsApp.</h2>
+        <p>O GarantCell transforma o controle de garantias em um processo simples e profissional.</p>
+      </div>
+
+      <div class="compare">
+        <article class="compare-card bad reveal">
+          <div class="compare-label">Sem o GarantCell</div>
+          <ul>
+            <li>✕ Informações espalhadas</li>
+            <li>✕ Dificuldade para consultar</li>
+            <li>✕ Garantias esquecidas</li>
+            <li>✕ Atendimento pouco profissional</li>
+          </ul>
+        </article>
+
+        <article class="compare-card good reveal">
+          <div class="compare-label">Com o GarantCell</div>
+          <ul>
+            <li>✓ Tudo em um só lugar</li>
+            <li>✓ Consulta rápida</li>
+            <li>✓ Controle de vencimentos</li>
+            <li>✓ Mais confiança para o cliente</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section audience" id="publico">
+      <div class="section-title reveal">
+        <span>PARA QUEM É</span>
+        <h2>Feito para empresas e profissionais que trabalham com garantia de serviços.</h2>
+      </div>
+
+      <div class="audience-grid">
+        <article class="audience-card reveal">
+          <div class="audience-icon">📱</div>
+          <h3>Assistências técnicas</h3>
+          <p>Celulares, eletrônicos, informática e muito mais.</p>
+        </article>
+        <article class="audience-card reveal">
+          <div class="audience-icon">🔧</div>
+          <h3>Oficinas</h3>
+          <p>Organize serviços realizados e garantias oferecidas.</p>
+        </article>
+        <article class="audience-card reveal">
+          <div class="audience-icon">❄️</div>
+          <h3>Refrigeração</h3>
+          <p>Controle instalações, reparos e prazos de garantia.</p>
+        </article>
+        <article class="audience-card reveal">
+          <div class="audience-icon">⚡</div>
+          <h3>Instaladores</h3>
+          <p>Ideal para elétrica, energia solar e manutenção.</p>
+        </article>
+        <article class="audience-card reveal">
+          <div class="audience-icon">🏠</div>
+          <h3>Prestadores de serviços</h3>
+          <p>Perfeito para quem oferece garantia pelo trabalho realizado.</p>
+        </article>
+        <article class="audience-card highlight reveal">
+          <div class="audience-icon">＋</div>
+          <h3>E muito mais</h3>
+          <p>Qualquer empresa que precise organizar garantias.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section showcase" id="demonstracao">
+      <div class="section-title reveal">
         <span>DEMONSTRAÇÃO</span>
-        <h2>Veja o GarantCell em funcionamento</h2>
-        <p>Um painel moderno, organizado e pensado para o dia a dia de uma assistência técnica.</p>
+        <h2>Um sistema bonito, simples e profissional.</h2>
+        <p>Visual moderno para facilitar o trabalho no dia a dia.</p>
       </div>
-      <div class="demo-frame">
-        <img src="assets/garantcell-sistema.png" alt="Demonstração do GarantCell" />
+
+      <div class="showcase-wrap reveal">
+        <div class="showcase-head">
+          <span>GarantCell</span>
+          <span>Sistema de Controle de Garantias</span>
+        </div>
+        <img src="assets/garantcell-sistema.png" alt="Demonstração do GarantCell">
       </div>
     </section>
 
-    <section class="section how">
-      <div class="section-heading">
-        <span>COMO FUNCIONA</span>
-        <h2>Você começa a usar em poucos passos</h2>
+    <section class="section benefits">
+      <div class="section-title reveal">
+        <span>BENEFÍCIOS</span>
+        <h2>Mais que um sistema: uma forma melhor de trabalhar.</h2>
       </div>
-      <div class="steps">
-        <div class="step"><b>1</b><h3>Faça a compra</h3><p>Pague com segurança pelo link de pagamento.</p></div>
-        <div class="step"><b>2</b><h3>Fale no WhatsApp</h3><p>Envie a confirmação e receba o sistema.</p></div>
-        <div class="step"><b>3</b><h3>Instale</h3><p>Siga as instruções simples de instalação.</p></div>
-        <div class="step"><b>4</b><h3>Comece a usar</h3><p>Cadastre e consulte suas garantias.</p></div>
+
+      <div class="benefit-grid">
+        <article class="benefit-card reveal">
+          <h3>Cadastro rápido</h3>
+          <p>Registre clientes, serviços e prazos sem complicação.</p>
+        </article>
+        <article class="benefit-card reveal">
+          <h3>Consulta em segundos</h3>
+          <p>Encontre uma garantia rapidamente quando o cliente retornar.</p>
+        </article>
+        <article class="benefit-card reveal">
+          <h3>Controle de vencimentos</h3>
+          <p>Visualize garantias ativas, próximas e expiradas.</p>
+        </article>
+        <article class="benefit-card reveal">
+          <h3>Mais profissionalismo</h3>
+          <p>Passe mais segurança e confiança em cada atendimento.</p>
+        </article>
       </div>
     </section>
 
     <section class="section pricing" id="preco">
-      <div class="price-card">
-        <div class="popular">OFERTA DE LANÇAMENTO</div>
+      <div class="pricing-panel reveal">
+        <div class="pricing-badge">OFERTA DE LANÇAMENTO</div>
         <h2>GarantCell</h2>
-        <p class="price-subtitle">Controle de Garantias para Assistências Técnicas</p>
-        <div class="price"><small>R$</small>29<span>,90</span></div>
-        <p class="once">Pagamento único • Sem mensalidade</p>
+        <p class="pricing-sub">Controle profissional de garantias</p>
+
+        <div class="price">
+          <small>R$</small>
+          <strong>29</strong>
+          <span>,90</span>
+        </div>
+
+        <p class="payment-once">Pagamento único • Sem mensalidade</p>
+
         <ul>
           <li>✓ Licença vitalícia</li>
           <li>✓ Sistema completo</li>
           <li>✓ Instalação no Windows</li>
-          <li>✓ Suporte via WhatsApp</li>
+          <li>✓ Suporte pelo WhatsApp</li>
           <li>✓ Desenvolvido pela DenysCell Software</li>
         </ul>
-        <a class="btn btn-primary btn-wide payment-link" href="#" data-payment-placeholder="true">Comprar agora por R$ 29,90</a>
-        <small class="payment-note">O botão será ligado ao Asaas assim que seu link estiver pronto.</small>
+
+        <a href="#" class="btn btn-primary btn-full buy-link" data-buy>Comprar agora por R$ 29,90</a>
+        <small class="payment-note">Enquanto o link do Asaas não estiver configurado, o botão abre o WhatsApp.</small>
       </div>
     </section>
 
-    <section class="section faq" id="duvidas">
-      <div class="section-heading">
+    <section class="section faq">
+      <div class="section-title reveal">
         <span>DÚVIDAS FREQUENTES</span>
         <h2>Perguntas comuns</h2>
       </div>
-      <details>
+
+      <details class="reveal">
         <summary>O GarantCell tem mensalidade?</summary>
         <p>Não. O valor de R$ 29,90 é pago uma única vez.</p>
       </details>
-      <details>
-        <summary>Em quais computadores funciona?</summary>
-        <p>O sistema foi desenvolvido para computadores com Windows 10 e Windows 11.</p>
+
+      <details class="reveal">
+        <summary>Serve apenas para assistência técnica?</summary>
+        <p>Não. Ele serve para qualquer empresa ou profissional que ofereça garantia de serviços.</p>
       </details>
-      <details>
+
+      <details class="reveal">
         <summary>Como recebo o sistema?</summary>
-        <p>Após a confirmação do pagamento, você fala com o suporte pelo WhatsApp e recebe as instruções.</p>
+        <p>Após o pagamento, você fala com o suporte no WhatsApp e recebe as instruções.</p>
       </details>
-      <details>
-        <summary>Precisa de internet para usar?</summary>
-        <p>Não para o uso normal do sistema. A internet pode ser necessária apenas para receber arquivos e suporte.</p>
+
+      <details class="reveal">
+        <summary>Funciona em computador?</summary>
+        <p>Sim. O sistema foi desenvolvido para Windows.</p>
       </details>
     </section>
 
     <section class="final-cta">
-      <h2>Organize suas garantias hoje mesmo</h2>
-      <p>Tenha mais controle, agilidade e profissionalismo na sua assistência técnica.</p>
-      <a class="btn btn-primary payment-link" href="#preco">Quero o GarantCell por R$ 29,90</a>
+      <div class="reveal">
+        <span>GARANTIAS ORGANIZADAS. CLIENTES MAIS CONFIANTES.</span>
+        <h2>Comece hoje a controlar suas garantias de forma profissional.</h2>
+        <a class="btn btn-primary" href="#preco">Quero o GarantCell por R$ 29,90</a>
+      </div>
     </section>
   </main>
 
-  <a class="whatsapp-float" href="https://wa.me/5555991126008?text=Ol%C3%A1%21%20Quero%20saber%20mais%20sobre%20o%20GarantCell%20por%20R%24%2029%2C90." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <a class="whatsapp" href="https://wa.me/5555991126008?text=Ol%C3%A1%21%20Quero%20comprar%20o%20GarantCell%20por%20R%24%2029%2C90." target="_blank" rel="noopener">
     <span>✆</span>
-    <div><small>Fale conosco</small><strong>WhatsApp</strong></div>
+    <div>
+      <small>Fale conosco</small>
+      <strong>WhatsApp</strong>
+    </div>
   </a>
 
   <footer>
-    <div class="brand footer-brand"><span class="brand-shield">✦</span><span>Garant<span>Cell</span></span></div>
-    <p>Controle de Garantias para Assistências Técnicas</p>
-    <p>Desenvolvido por <strong>DenysCell Software</strong> • (55) 99112-6008</p>
+    <div class="brand footer-brand">
+      <span class="brand-icon">G</span>
+      <span class="brand-name">Garant<span>Cell</span></span>
+    </div>
+    <p>Porque uma garantia bem organizada também vende confiança.</p>
+    <p>DenysCell Software • (55) 99112-6008</p>
   </footer>
 
   <script src="script.js"></script>
