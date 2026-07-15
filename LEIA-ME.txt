@@ -1,18 +1,18 @@
-GARANTCELL — SITE FINAL COM PÁGINA DE FINALIZAÇÃO
+GARANTPRO — SITE FINAL COM PÁGINA DE FINALIZAÇÃO
 
 ARQUIVOS:
 - index.html
 - checkout.html
 - styles.css
 - script.js
-- assets/garantcell-sistema.png
+- assets/garantpro-sistema.png
 
 LINK DE PAGAMENTO:
 https://mpago.la/12shRh5
 
 COMO PUBLICAR NO GITHUB:
 1. Extraia o ZIP.
-2. No repositório GarantCell, clique em Add file > Upload files.
+2. No repositório GarantPro, clique em Add file > Upload files.
 3. Envie TODOS os arquivos e a pasta assets.
 4. Confirme a substituição dos arquivos antigos.
 5. Clique em Commit changes.
