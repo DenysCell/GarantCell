@@ -58,6 +58,29 @@ function mostrarNegado(texto) {
   mensagem.textContent = texto || 'Não foi possível confirmar este pagamento.';
   ajuda.innerHTML = '<a href="checkout.html">Voltar ao pagamento</a>.';
 }
+function iniciarDownloadAutomatico(downloadUrl) {
+  let segundos = 3;
+  ajuda.textContent = `Pagamento confirmado. O download começará automaticamente em ${segundos} segundos.`;
+
+  const contador = setInterval(() => {
+    segundos -= 1;
+    if (segundos > 0) {
+      ajuda.textContent = `Pagamento confirmado. O download começará automaticamente em ${segundos} segundos.`;
+      return;
+    }
+
+    clearInterval(contador);
+    ajuda.textContent = 'Download iniciado. Caso não comece, clique no botão Baixar GarantPro.';
+
+    const linkTemporario = document.createElement('a');
+    linkTemporario.href = downloadUrl;
+    linkTemporario.style.display = 'none';
+    document.body.appendChild(linkTemporario);
+    linkTemporario.click();
+    linkTemporario.remove();
+  }, 1000);
+}
+
 function mostrarAprovado(downloadUrl) {
   icone.textContent = '✓'; icone.className = 'check approved';
   titulo.textContent = 'Compra aprovada!';
@@ -65,7 +88,7 @@ function mostrarAprovado(downloadUrl) {
   baixar.href = downloadUrl;
   baixar.removeAttribute('aria-disabled');
   instrucoes.style.display = 'block'; acoes.style.display = 'grid';
-  ajuda.textContent = 'O download é liberado somente depois da confirmação do pagamento pelo Mercado Pago.';
+  iniciarDownloadAutomatico(downloadUrl);
 }
 
 const ESPERA_MS = 3000;
