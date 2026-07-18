@@ -46,11 +46,11 @@ const acoes = document.getElementById('acoes');
 const ajuda = document.getElementById('ajuda');
 const baixar = document.getElementById('baixarGarantPro');
 
-function mostrarPendente() {
+function mostrarPendente(tentativa = 0, total = 40) {
   icone.textContent = '⌛'; icone.className = 'check pending';
-  titulo.textContent = 'Pagamento pendente';
-  mensagem.textContent = 'O Mercado Pago ainda está processando o pagamento. Assim que for aprovado, abra novamente o comprovante ou fale com o suporte.';
-  ajuda.innerHTML = '<a href="checkout.html">Tentar novamente</a> ou fale conosco pelo WhatsApp.';
+  titulo.textContent = 'Confirmando seu pagamento';
+  mensagem.textContent = 'O Mercado Pago recebeu o pagamento e ainda está finalizando a confirmação. Esta página será atualizada automaticamente.';
+  ajuda.textContent = `Verificação automática em andamento (${tentativa}/${total}). Não feche esta página.`;
 }
 function mostrarNegado(texto) {
   icone.textContent = '×'; icone.className = 'check denied';
@@ -68,18 +68,49 @@ function mostrarAprovado(downloadUrl) {
   ajuda.textContent = 'O download é liberado somente depois da confirmação do pagamento pelo Mercado Pago.';
 }
 
-(async () => {
-  if (statusParam === 'pending' && !paymentId) return mostrarPendente();
-  if (!paymentId) return mostrarNegado('Pagamento não identificado. Acesse esta página pelo retorno do Mercado Pago.');
-  try {
-    const response = await fetch(`/api/verify-payment?payment_id=${encodeURIComponent(paymentId)}`);
-    const data = await response.json();
-    if (data.approved && data.download_url) return mostrarAprovado(data.download_url);
-    if (data.status === 'pending' || data.status === 'in_process') return mostrarPendente();
-    return mostrarNegado('O pagamento não está aprovado no Mercado Pago.');
-  } catch (_) {
-    return mostrarNegado('Não foi possível consultar o pagamento agora. Tente novamente em alguns instantes.');
+const ESPERA_MS = 3000;
+const MAX_TENTATIVAS = 40; // aproximadamente 2 minutos
+
+function esperar(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function consultarPagamento() {
+  if (!paymentId) {
+    if (statusParam === 'pending') return mostrarPendente(0, MAX_TENTATIVAS);
+    return mostrarNegado('Pagamento não identificado. Acesse esta página pelo retorno do Mercado Pago.');
   }
-})();
+
+  for (let tentativa = 1; tentativa <= MAX_TENTATIVAS; tentativa++) {
+    mostrarPendente(tentativa, MAX_TENTATIVAS);
+
+    try {
+      const response = await fetch(`/api/verify-payment?payment_id=${encodeURIComponent(paymentId)}&_=${Date.now()}`, {
+        cache: 'no-store'
+      });
+      const data = await response.json();
+
+      if (data.approved && data.download_url) {
+        return mostrarAprovado(data.download_url);
+      }
+
+      const status = String(data.status || '').toLowerCase();
+      if (status && !['pending', 'in_process', 'authorized'].includes(status)) {
+        return mostrarNegado('O pagamento não foi aprovado pelo Mercado Pago.');
+      }
+    } catch (_) {
+      // Falhas momentâneas de conexão não encerram a verificação.
+    }
+
+    if (tentativa < MAX_TENTATIVAS) await esperar(ESPERA_MS);
+  }
+
+  icone.textContent = '⌛'; icone.className = 'check pending';
+  titulo.textContent = 'Pagamento ainda em confirmação';
+  mensagem.textContent = 'O pagamento foi recebido, mas o Mercado Pago ainda não concluiu a confirmação. Atualize esta página em alguns instantes.';
+  ajuda.innerHTML = '<a href="javascript:location.reload()">Verificar novamente</a> ou fale conosco pelo WhatsApp.';
+}
+
+consultarPagamento();
 </script>
 </body></html>
